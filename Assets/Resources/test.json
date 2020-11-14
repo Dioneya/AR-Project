@@ -1,0 +1,14 @@
+{
+    "Items":
+    [
+        {
+            "name":"Nikita",
+            "kurs":"frist"
+        },
+        
+        {
+            "name": "Andrey",
+            "kurs": "first"
+        }
+    ]
+}
