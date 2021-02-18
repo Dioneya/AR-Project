@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
 public class ServerDownloader : MonoBehaviour
 {
     private Dictionary<ArObjects.Type, ICacheble> dict ;
@@ -29,12 +30,9 @@ public class ServerDownloader : MonoBehaviour
         foreach(MarkerJsonLoader.Marker marker in institution.data.markers)
         {
             Debug.LogWarning(GlobalVariables.link + marker.image_set[0].url+" "+marker.id);
-
             yield return StartCoroutine(dict[ArObjects.Type.Sticker].DownloadAndCache(marker.id-1));
             yield return StartCoroutine(dict[ArObjects.Type.Marker].DownloadAndCache(marker.id-1));
             yield return StartCoroutine(dict[(ArObjects.Type)marker.a_r_object.object_type.value].DownloadAndCache(marker.id-1));
-
-            
         }
 
         SceneManager.LoadScene(2);

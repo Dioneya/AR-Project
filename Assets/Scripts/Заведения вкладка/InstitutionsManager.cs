@@ -8,7 +8,7 @@ public class InstitutionsManager : MonoBehaviour
 {
     public InstitutionJsonLoader.InstitutionList institutionList = new InstitutionJsonLoader.InstitutionList();
     private List<GameObject> organizationsList = new List<GameObject>();
-    [SerializeField] GameObject organization, detailsPage;
+    [SerializeField] GameObject organization, detailsPage, retry;
     static public UnityEvent PickOrganization;
     void Start()
     {
@@ -21,8 +21,14 @@ public class InstitutionsManager : MonoBehaviour
         PickOrganization.AddListener(ShowDetailsPage);
     }
 
+    private void CheckInternetConnection() 
+    {
+        retry.SetActive(Application.internetReachability != NetworkReachability.ReachableViaLocalAreaNetwork || Application.internetReachability != NetworkReachability.ReachableViaLocalAreaNetwork);
+    }
+
     IEnumerator GetJSONFromServer()
     {
+        CheckInternetConnection();
         UnityWebRequest www = UnityWebRequest.Get(GlobalVariables.link+"/public/api/institution");
         DownloadHandler downloadHandler = www.downloadHandler;
         yield return www.SendWebRequest();
@@ -34,6 +40,7 @@ public class InstitutionsManager : MonoBehaviour
         }
         else {
             Debug.Log("invalid url");
+
         }
     }
 
