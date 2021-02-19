@@ -23,7 +23,7 @@ public class InstitutionsManager : MonoBehaviour
 
     private void CheckInternetConnection() 
     {
-        retry.SetActive(Application.internetReachability != NetworkReachability.ReachableViaLocalAreaNetwork || Application.internetReachability != NetworkReachability.ReachableViaLocalAreaNetwork);
+        retry.SetActive(Application.internetReachability == NetworkReachability.NotReachable);
     }
 
     IEnumerator GetJSONFromServer()
