@@ -48,6 +48,13 @@ public class PathWorker
         return MarkerPath(institutionData, institutionMarker);
     }
 
+    public static string MarkerStrPathCustom(int indexMarker, InstitutionJsonLoader.InstitutionObj inst)//возвращает путь к папке с маркером 
+    {
+        InstitutionJsonLoader.InstitutionObj institutionData = inst;
+        MarkerJsonLoader.Marker institutionMarker = institutionData.markers[indexMarker];
+
+        return MarkerPath(institutionData, institutionMarker);
+    }
     public static string ArObjStrPath(int indexMarker) // возвращает путь к папке кэша объекта
     {
         InstitutionJsonLoader.InstitutionObj institutionData = GlobalVariables.institution.data;
@@ -63,6 +70,7 @@ public class PathWorker
     }
     public static string CacheFilePath(int indexOfMarker, ArObjects.Type type, string fileName = "") //возвращает путь к файлу кэша объекта
     {
+
         if (fileName == String.Empty && GlobalVariables.institution.data.markers.Count!=0)
             fileName = GlobalVariables.institution.data.markers[indexOfMarker].a_r_object.id.ToString();
         

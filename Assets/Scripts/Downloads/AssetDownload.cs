@@ -2,7 +2,6 @@
 using UnityEngine;
 using UnityEngine.Networking;
 using Vuforia;
-
 public class AssetDownload : DownloadebleARObject
 {
     private ARObjectJsonLoader.Transform transform_obj;
@@ -30,6 +29,7 @@ public class AssetDownload : DownloadebleARObject
 
         AssetBundle bundle = (DownloadHandlerAssetBundle.GetContent(request));
 
+
         if (request.error == null)
         {
             GameObject obj = (GameObject)bundle.LoadAsset(nameObj);
@@ -41,6 +41,7 @@ public class AssetDownload : DownloadebleARObject
             Vector3 objScale = new Vector3(transform_obj.scale.x, transform_obj.scale.y, transform_obj.scale.z);
             Vector3 objPos = new Vector3(transform_obj.position.x, transform_obj.position.y, transform_obj.position.z);
 
+            
             GameObject asset = Instantiate(obj, transform);
 
             if(transform_obj != null)
@@ -50,7 +51,6 @@ public class AssetDownload : DownloadebleARObject
             }
                 
             #endregion
-
 
             /*#region Создание и настройка ActionLink на объекте
             var action = asset.AddComponent<ActionLink>();

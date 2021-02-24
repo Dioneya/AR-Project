@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+using System.IO;
 public class OranizationDetails : MonoBehaviour
 {
     public static InstitutionJsonLoader.InstitutionObj inst;
@@ -10,14 +10,18 @@ public class OranizationDetails : MonoBehaviour
     [Header("Карточка Заведения")]
     [SerializeField] private TextMeshProUGUI organizationName, organizationDescription;
     [SerializeField] private RawImage image;
-    [SerializeField] private Button button;
+    [SerializeField] private Button buttonDownload, buttonScan;
     [Header("Основная часть")]
     [SerializeField] private TextMeshProUGUI description;
+    [SerializeField] private GameObject delete;
     
+
+
 
     private void Start()
     {
-        button.onClick.AddListener(OnButtonDownloadClick);
+        buttonDownload.onClick.AddListener(OnButtonDownloadClick);
+        buttonScan.onClick.AddListener(OnButtonDownloadClick);
     }
 
     private void OnEnable()
@@ -31,6 +35,17 @@ public class OranizationDetails : MonoBehaviour
         organizationName.text = inst.title;
         organizationDescription.text = inst.description;
         description.text = inst.description;
+
+        bool isCached = Directory.Exists(PathWorker.InstitutionPath(inst.id));
+
+        buttonDownload.gameObject.SetActive(!isCached);
+        buttonScan.gameObject.SetActive(isCached);
+        delete.SetActive(isCached);
+    }
+
+    public void DeleteCache()
+    {
+        Directory.Delete(PathWorker.InstitutionPath(inst.id), true);
     }
 
     private void OnButtonDownloadClick() 

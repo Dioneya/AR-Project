@@ -15,12 +15,14 @@ public class SwipeInput : MonoBehaviour {
 
 	public UnityEvent leftSwipe = new UnityEvent();
 	public UnityEvent rightSwipe = new UnityEvent();
-	
+	[SerializeField] GameObject trigger;
 	public bool debugWithArrowKeys = true;
 
 	Vector2 startPos;
 	float startTime;
 
+	public void LeftSwipe() { leftSwipe.Invoke(); }
+	public void RightSwipe() { rightSwipe.Invoke(); }
 	public void Update()
 	{
 
@@ -53,10 +55,12 @@ public class SwipeInput : MonoBehaviour {
 
 		if (Mathf.Abs (swipe.x) > Mathf.Abs (swipe.y)) { // Horizontal swipe
 			if (swipe.x > 0) {
-				rightSwipe.Invoke();
+				if(trigger.activeSelf) return;
+				leftSwipe.Invoke();
 ;			}
 			else {
-				leftSwipe.Invoke();
+				if(trigger.activeSelf) return;
+				rightSwipe.Invoke();
 			}
 		}
 		else { // Vertical swipe

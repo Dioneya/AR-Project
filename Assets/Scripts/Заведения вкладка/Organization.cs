@@ -13,9 +13,9 @@ public class Organization : MonoBehaviour
 
     private void Start()
     {
-        NextBtn.onClick.AddListener(()=> OranizationDetails.imageOrg = image.texture);
+        NextBtn.onClick.AddListener(() => OranizationDetails.imageOrg = image.texture);
         NextBtn.onClick.AddListener(() => OranizationDetails.inst = institution);
-        NextBtn.onClick.AddListener(()=> InstitutionsManager.PickOrganization.Invoke());
+        NextBtn.onClick.AddListener(() => InstitutionsManager.PickOrganization.Invoke());
     }
     public void SetParam(InstitutionJsonLoader.InstitutionObj _institution)
     {

@@ -3,16 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Networking;
+using TMPro;
 
 public class InstitutionsManager : MonoBehaviour
 {
     public InstitutionJsonLoader.InstitutionList institutionList = new InstitutionJsonLoader.InstitutionList();
     private List<GameObject> organizationsList = new List<GameObject>();
     [SerializeField] GameObject organization, detailsPage, retry;
+    [SerializeField] TextMeshProUGUI scannerText, organizationsText;
     static public UnityEvent PickOrganization;
     void Start()
     {
         StartCoroutine(GetJSONFromServer());
+        Application.targetFrameRate = 60;
     }
 
     private void OnEnable()
@@ -48,6 +51,17 @@ public class InstitutionsManager : MonoBehaviour
     {
         ClearList();
         StartCoroutine(GetJSONFromServer());
+    }
+
+    public void ChangeToQR()
+    {
+        organizationsText.color = scannerText.color;
+        scannerText.color = Color.black;
+    }
+    public void ChangeToOrganization()
+    {
+        scannerText.color = organizationsText.color;
+        organizationsText.color = Color.black;
     }
 
     private void ClearList() 
