@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.IO;
 
 
 public class Organization : MonoBehaviour
@@ -9,6 +10,7 @@ public class Organization : MonoBehaviour
     [SerializeField] private RawImage image;
     [SerializeField] private TextMeshProUGUI name, description;
     [SerializeField] private Button NextBtn;
+    [SerializeField] private GameObject downloaded;
 
 
     private void Start()
@@ -24,5 +26,7 @@ public class Organization : MonoBehaviour
         StartCoroutine(ImgDownload.DownloadImage(GlobalVariables.link+institution.image,image));
         name.text = institution.title;
         description.text = institution.description;
+
+        downloaded.SetActive(Directory.Exists(PathWorker.InstitutionPath(institution.id)));
     }
 }

@@ -34,7 +34,7 @@ public class AudioDownload : DownloadebleARObject, IPlayable
         yield return request.SendWebRequest();
 
         if (!request.isHttpError && !request.isNetworkError)
-            audioSource.clip=(DownloadHandlerAudioClip.GetContent(request));
+            audioSource.clip=DownloadHandlerAudioClip.GetContent(request);
         else
             Debug.LogErrorFormat("error request [{0}, {1}]", url, request.error);
 
