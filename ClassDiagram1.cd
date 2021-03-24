@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Comment CommentText="Класс отвечающий за слежением маркера библиотекой Vuforia">
+    <Position X="10.448" Y="8.354" Height="0.427" Width="4.505" />
+  </Comment>
+  <Comment CommentText="Класс-трэкер Asset объектов на маркере">
+    <Position X="8.492" Y="14.621" Height="0.46" Width="2.149" />
+  </Comment>
+  <Comment CommentText="Класс-трэкер Аудио объектов на маркере">
+    <Position X="15.676" Y="14.624" Height="0.488" Width="2.149" />
+  </Comment>
+  <Class Name="AR_animatedAssetBundle">
+    <Position X="1" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Assets\Scripts\Cache\AR_objects.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AR_assetBundle">
+    <Position X="2.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Assets\Scripts\Cache\AR_objects.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AR_objects">
+    <Position X="4.25" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAAEAABgAAAAAgAAAAAAAAAAQAgIAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Cache\AR_objects.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AR_audio">
+    <Position X="6.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Assets\Scripts\Cache\AR_objects.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AR_image">
+    <Position X="8" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Assets\Scripts\Cache\AR_objects.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AR_logo">
+    <Position X="1" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Assets\Scripts\Cache\AR_objects.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AR_marker">
+    <Position X="2.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Assets\Scripts\Cache\AR_objects.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AR_model">
+    <Position X="4.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Assets\Scripts\Cache\AR_objects.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AR_sticker">
+    <Position X="6.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Assets\Scripts\Cache\AR_objects.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AR_text">
+    <Position X="8" Y="8.25" Width="1.5" />
+    <InheritanceLine Type="AR_objects" FixedToPoint="true">
+      <Path>
+        <Point X="5.25" Y="7.281" />
+        <Point X="5.25" Y="7.875" />
+        <Point X="8.562" Y="7.875" />
+        <Point X="8.562" Y="8.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Assets\Scripts\Cache\AR_objects.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ARObjectJsonLoader">
+    <Position X="20" Y="7" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="ARObjectJsonLoader.Transform" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Json\ARObjectJsonLoader.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="ARObjectJsonLoader.ArObject" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Json\ARObjectJsonLoader.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="ARObjectJsonLoader.ObjectType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Json\ARObjectJsonLoader.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="ARObjectJsonLoader.ObjectPath" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Json\ARObjectJsonLoader.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="ARObjectJsonLoader.Position" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Json\ARObjectJsonLoader.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="ARObjectJsonLoader.GeoCords" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Json\ARObjectJsonLoader.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="ARObjectJsonLoader.ArObjectList" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Json\ARObjectJsonLoader.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="ARObjectJsonLoader.Scale" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Json\ARObjectJsonLoader.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="ARObjectJsonLoader.Rotation" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Json\ARObjectJsonLoader.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="ARObjectJsonLoader.ObjectSettings" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Json\ARObjectJsonLoader.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Json\ARObjectJsonLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArObjects">
+    <Position X="27.25" Y="7.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="ArObjects.Type" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\ArObjects.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ArObjects.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AssetTracker">
+    <Position X="9.75" Y="15.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAIAQBAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAIAAA=</HashCode>
+      <FileName>Assets\Scripts\Downloads\Tracker\AssetTracker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tracker">
+    <Position X="11.5" Y="9" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Tracker.TrackingStatusFilter" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Downloads\Tracker\Tracker.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAABAQBQACCAA0AAAACCCAAAASAAAQAAAADAAQAAEAA=</HashCode>
+      <FileName>Assets\Scripts\Downloads\Tracker\Tracker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AudioDownload">
+    <Position X="12.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAgAAAAACAEAAAAAEBAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Downloads\AudioDownload.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AudioTracker">
+    <Position X="14.5" Y="15.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQBAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Downloads\Tracker\AudioTracker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DownloadebleARObject" Collapsed="true">
+    <Position X="15.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAACQAACIAEAAAAEAAAAAAgA=</HashCode>
+      <FileName>Assets\Scripts\Downloads\DownloadebleARObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="UnityEngine.MonoBehaviour" Collapsed="true">
+    <Position X="10.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="AssetDownload">
+    <Position X="14" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAQBAAAAAAAAAAACAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Downloads\AssetDownload.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ImgDownload">
+    <Position X="15.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAIAAA=</HashCode>
+      <FileName>Assets\Scripts\Downloads\ImgDownload.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TextDownload">
+    <Position X="17.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEACAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Downloads\TextDownload.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VideoDownload">
+    <Position X="19.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAgAAAQAAAAAAAAAEACACAAAA=</HashCode>
+      <FileName>Assets\Scripts\Downloads\VideoDownload.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="JsonLoader">
+    <Position X="16" Y="7.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAgAACBAAAAAAAAAFQAAAAAAAQAAAAAAAABAAkA=</HashCode>
+      <FileName>Assets\Scripts\Json\JsonLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Marker">
+    <Position X="9.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQABAIAAAACAAAAAAAABAAAAAAkAEAAAAAAACAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Downloads\Marker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MarkerJsonLoader">
+    <Position X="23.5" Y="7" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="MarkerJsonLoader.Image" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Json\MarkerJsonLoader.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="MarkerJsonLoader.Marker" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Json\MarkerJsonLoader.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="MarkerJsonLoader.MarkerList" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Json\MarkerJsonLoader.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Json\MarkerJsonLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Markers">
+    <Position X="28.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UAIAAABAACIAAAAAAAAAAAAMAAAAACAAAAgCAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Downloads\Markers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Organization">
+    <Position X="30.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACBgAAAAIAAAAAAAEAAMABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Заведения вкладка\Organization.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PathWorker" Collapsed="true">
+    <Position X="30.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAACAAAASAAEAAAAgAAAAAQAAAAAAAEAAAAAQAAAAg=</HashCode>
+      <FileName>Assets\Scripts\Cache\PathWorker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="30.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="QRScanner">
+    <Position X="25.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAAIAAQCBAkAAAAAAAAASBAAAAAwAABAAAABAAAFI=</HashCode>
+      <FileName>Assets\Scripts\QRScanner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServerDownloader">
+    <Position X="35.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAIAAAAAAAAAAAAAAAAAAAAAAAAAAAMEAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Downloads\ServerDownloader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OrganizationStickers">
+    <Position X="32.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAEEAAAAAAAAAAAAABACAA=</HashCode>
+      <FileName>Assets\Scripts\Заведения вкладка\OrganizationStickers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OranizationDetails">
+    <Position X="34" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAEACAAIAAgAUAAEQACAAKAAAAAAIAACAA=</HashCode>
+      <FileName>Assets\Scripts\Заведения вкладка\OranizationDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InstitutionJsonLoader">
+    <Position X="21.75" Y="7" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="InstitutionJsonLoader.InstitutionObj" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Json\InstitutionJsonLoader.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="InstitutionJsonLoader.Institution" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Json\InstitutionJsonLoader.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="InstitutionJsonLoader.InstitutionList" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Json\InstitutionJsonLoader.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="InstitutionJsonLoader.Type" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Json\InstitutionJsonLoader.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="InstitutionJsonLoader.GeoCoord" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Json\InstitutionJsonLoader.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Json\InstitutionJsonLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChoseDownloaderScript">
+    <Position X="23.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAACAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Downloads\ChoseDownloaderScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CacheChecker">
+    <Position X="21.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Cache\CacheChecker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GlobalVariables" Collapsed="true">
+    <Position X="13.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAEAAAAAAAAAAAAAAAABAgAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\GlobalVariables.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Focus" Collapsed="true">
+    <Position X="3" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAACAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Focus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

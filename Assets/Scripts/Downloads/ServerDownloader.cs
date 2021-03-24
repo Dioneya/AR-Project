@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.IO;
 using TMPro;
+/// <summary>
+/// Класс загрузки данных заведения с сервера
+/// </summary>
 public class ServerDownloader : MonoBehaviour
 {
-    private Dictionary<ArObjects.Type, ICacheble> dict ;
-    [SerializeField] TextMeshProUGUI loadText;
-    public double progress = 0, total = 0;
+    private Dictionary<ArObjects.Type, ICacheble> dict ; // словарь компонентов ICacheble
+    [SerializeField] TextMeshProUGUI loadText; //Текст у loader на сцене
+    public double progress = 0, total = 0; //текущий прогресс, общий прогресс 
     void Awake()
     {
+        //Инициализация словаря
         dict = new Dictionary<ArObjects.Type, ICacheble>()
         {
             {ArObjects.Type.Image, gameObject.AddComponent<AR_image>()},
@@ -23,8 +26,13 @@ public class ServerDownloader : MonoBehaviour
             {ArObjects.Type.Marker, gameObject.AddComponent<AR_marker>()},
             {ArObjects.Type.AnimatedAssetBundle, gameObject.AddComponent<AR_animatedAssetBundle>()}
         };
+        
     }
-
+    /// <summary>
+    /// Начать загрузку данных
+    /// </summary>
+    /// <param name="institution">Класс заведения с которого нужно скачать данные</param>
+    /// <returns></returns>
     public IEnumerator Download(InstitutionJsonLoader.Institution institution)
     {
         total = 1+(institution.data.markers.Count*3);
@@ -44,8 +52,10 @@ public class ServerDownloader : MonoBehaviour
 
         SceneManager.LoadScene(2);
     }
-
-    void AddProcent()
+    /// <summary>
+    /// Функция добавления прогресса / отображение акутального значения на сцене
+    /// </summary>
+    private void AddProcent()
     {
         progress++;
         loadText.text = "Загрузка " + System.Math.Round((double)(progress/total*100)) + "%";

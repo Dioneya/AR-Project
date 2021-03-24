@@ -4,6 +4,9 @@ using UnityEngine;
 using System;
 using UnityEngine.Networking;
 
+/// <summary>
+/// Класс обработки JSON файла полученный с сервера 
+/// </summary>
 public class JsonLoader : MonoBehaviour
 {
     private CacheChecker cacheChecker;
@@ -12,38 +15,43 @@ public class JsonLoader : MonoBehaviour
 
     public InstitutionJsonLoader.Institution institution;
     public string jsonUrl;
-    public string id; 
+    public string id;
     private bool mustCache = true;
 
-    void Awake() 
+    void Awake()
     {
         cacheChecker = GetComponent<CacheChecker>();
         serverDownloader = GetComponent<ServerDownloader>();
     }
     void Start()
     {
-        
         //sceneLoader = GetComponent<SceneLoader>();
         StartLoad();
     }
 
-    public void StartLoad() 
+    /// <summary>
+    /// Начать загрузку JSON файла по глобальному ID текущего заведения
+    /// </summary>
+    public void StartLoad()
     {
         //var cacheText = cacheChecker.GetTextFromCache("json",Convert.ToString(qrScn.checkedID));
-        var cacheText = cacheChecker.GetTextFromCache("json", "institution_"+ GlobalVariables.checkedID);
-        if (cacheText != null) 
+        var cacheText = cacheChecker.GetTextFromCache("json", "institution_" + GlobalVariables.checkedID);
+        if (cacheText != null)
         {
             Debug.LogWarning("Кэш найден");
             ProcessJson(cacheText);
         }
-        else 
+        else
         {
             Debug.LogWarning("Кэш не найден, выполнена загрузка");
             jsonUrl = GlobalVariables.link + "/api/institution/" + GlobalVariables.checkedID;
             StartCoroutine(LoadJson());
         }
     }
-
+    /// <summary>
+    /// Загрузка с сервера JSON файла
+    /// </summary>
+    /// <returns></returns>
     IEnumerator LoadJson()
     {
         UnityWebRequest www = UnityWebRequest.Get(jsonUrl);
@@ -54,20 +62,25 @@ public class JsonLoader : MonoBehaviour
             ProcessJson(downloadHandler.text);
             Debug.Log(downloadHandler.text);
         }
-        else {
+        else
+        {
             Debug.Log("invalid url");
             StartCoroutine(LoadJson());
         }
     }
 
-    private void ProcessJson(string url)
+    /// <summary>
+    /// Сериализация полученного JSON файла в класс хранящийся в глобальной переменной
+    /// </summary>
+    /// <param name="jsonText">JSON текст</param>
+    private void ProcessJson(string jsonText)
     {
-        GlobalVariables.institution = JsonUtility.FromJson<InstitutionJsonLoader.Institution>(url);
+        GlobalVariables.institution = JsonUtility.FromJson<InstitutionJsonLoader.Institution>(jsonText);
         institution = GlobalVariables.institution;
         Debug.LogWarning(GlobalVariables.institution.data.title);
-        if (mustCache) 
+        if (mustCache)
         {
-            AR_text.CacheText("institution_" + Convert.ToString(GlobalVariables.institution.data.id),"json",url);
+            AR_text.CacheText("institution_" + Convert.ToString(GlobalVariables.institution.data.id), "json", jsonText);
         }
 
         StartCoroutine(serverDownloader.Download(GlobalVariables.institution));

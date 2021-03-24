@@ -1,14 +1,16 @@
-﻿using System.ComponentModel;
-using UnityEngine;
+﻿using UnityEngine;
 using Vuforia;
 using System.Collections.Generic;
 
-
-public class ChoseDownloaderScript : MonoBehaviour
+/// <summary>
+/// Класс который занимается выбором типа загрузки его AR объекта
+/// </summary>
+public class ScriptChooser : MonoBehaviour
 {
-    private static IDownloadeble downloadeble;
-    public static bool isDone = false;
+    private static IDownloadeble downloadeble; // текущий загружаемый объект
+    public static bool isDone = false; // флаг окончания загрузки объекта
 
+    //Словарь типов классов для генерации AR объектов
     private static Dictionary<ArObjects.Type, DownloadebleARObject> dict = new Dictionary<ArObjects.Type, DownloadebleARObject>() 
     {
         {ArObjects.Type.Image, new ImgDownload()},
@@ -19,6 +21,13 @@ public class ChoseDownloaderScript : MonoBehaviour
         {ArObjects.Type.Text, new TextDownload()},
         {ArObjects.Type.AnimatedAssetBundle, new AssetDownload()}
     };
+
+    /// <summary>
+    /// Выбор нужной загрузки AR объекта по заданному типу объекта
+    /// </summary>
+    /// <param name="key">Тип AR объекта</param>
+    /// <param name="trackableBehaviour">DataSet маркера</param>
+    /// <param name="marker">Класс описания маркера</param>
     public static void SelectDownload(int key, ref DataSetTrackableBehaviour trackableBehaviour, MarkerJsonLoader.Marker marker)
     {
         GameObject trackableBehaviour_GameObject = trackableBehaviour.gameObject;

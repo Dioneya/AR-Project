@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using Vuforia;
-using System;
-using System.IO;
 using System.Collections;
 
+/// <summary>
+/// Класс отвечающий за маркеры на сцене
+/// </summary>
 public class Markers : MonoBehaviour
 {
     private List<MarkerJsonLoader.Marker> _markerInfo;
@@ -14,11 +15,13 @@ public class Markers : MonoBehaviour
 
     void Start()
     {
-        
         _LoadingCamera.enabled = true;
         ChangeInst();
     }
 
+    /// <summary>
+    /// Замена заведения
+    /// </summary>
     public void ChangeInst() 
     {
         if (GlobalVariables.isInstChanged) 
@@ -27,10 +30,12 @@ public class Markers : MonoBehaviour
             Init();
             GlobalVariables.isInstChanged = false;
         }
-        StartCoroutine(DisableLoadingCamera());  // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        StartCoroutine(DisableLoadingCamera());  
     }
-
-    void ClearList() 
+    /// <summary>
+    /// Удаление маркеров со сцены и очистка списка 
+    /// </summary>
+    private void ClearList() 
     {
         if (_objectTracker != null) 
         {
@@ -47,12 +52,18 @@ public class Markers : MonoBehaviour
         }
         makerObjectsList.Clear();
     }
-
+    /// <summary>
+    /// Ожидание перед повторной попытки Init()
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator Waiter() 
     {
         yield return new WaitForSeconds(.10f);
         Init();
     }
+    /// <summary>
+    /// Инициализация маркеров
+    /// </summary>
     private void Init()
     {
         _objectTracker = TrackerManager.Instance.GetTracker<ObjectTracker>();
@@ -75,10 +86,19 @@ public class Markers : MonoBehaviour
             StartCoroutine(Waiter());
         }
     }
+    /// <summary>
+    /// Отключение загрузочной камеры
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator DisableLoadingCamera() {
         yield return new WaitForSeconds(.15f);
         _LoadingCamera.gameObject.SetActive(false);
     }
+    /// <summary>
+    /// Создание маркеров
+    /// </summary>
+    /// <param name="_marker">Класс данных маркера</param>
+    /// <returns></returns>
     private IEnumerator CreateMarkers(MarkerJsonLoader.Marker _marker)
     {
         for (int i = 0; i < _marker.image_set.Count; i++) 
@@ -90,9 +110,9 @@ public class Markers : MonoBehaviour
 
             Marker marker = new Marker(name, cacheFilePath, transform, _objectTracker);
             
-            ChoseDownloaderScript.SelectDownload(_marker.a_r_object.object_type.value, ref marker.trackableBehaviour, _marker); //Запустим скрипт по выбору сценария загрузки объекта для триггера
-            yield return new WaitWhile(() => !ChoseDownloaderScript.isDone);
-            ChoseDownloaderScript.isDone = false;
+            ScriptChooser.SelectDownload(_marker.a_r_object.object_type.value, ref marker.trackableBehaviour, _marker); //Запустим скрипт по выбору сценария загрузки объекта для триггера
+            yield return new WaitWhile(() => !ScriptChooser.isDone);
+            ScriptChooser.isDone = false;
             makerObjectsList.Add(marker.markerObj);
         }
     }
