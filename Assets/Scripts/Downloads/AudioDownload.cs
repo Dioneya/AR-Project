@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using Vuforia;
+using System;
 
 public class AudioDownload : DownloadebleARObject, IPlayable
 {
@@ -16,9 +17,9 @@ public class AudioDownload : DownloadebleARObject, IPlayable
         quad.GetComponent<Transform>().position = new Vector3(0,0.5f,0);
 
         FilePathDetect();
-        string url =  "file://" + filePath;
+        string url =  "file:///" + filePath;
 
-        StartCoroutine(LoadARObject(filePath));
+        StartCoroutine(LoadARObject(url));
     }
 
     private void CreateAudioSource()
@@ -29,16 +30,20 @@ public class AudioDownload : DownloadebleARObject, IPlayable
 
     protected override IEnumerator LoadARObject(string url)
     {
-        var request = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG);
+        using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG))
+        {
+            yield return www.SendWebRequest();
 
-        yield return request.SendWebRequest();
-
-        if (!request.isHttpError && !request.isNetworkError)
-            audioSource.clip=DownloadHandlerAudioClip.GetContent(request);
-        else
-            Debug.LogErrorFormat("error request [{0}, {1}]", url, request.error);
-
-        request.Dispose();
+            if (www.isNetworkError || www.isHttpError)
+            {
+                Debug.Log(www.error);
+            }
+            else
+            {
+                AudioClip myClip = DownloadHandlerAudioClip.GetContent(www);
+                audioSource.clip = myClip;
+            }
+        }
     }
 
     public void StartPlay() 
