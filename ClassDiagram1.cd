@@ -10,7 +10,18 @@
     <Position X="15.676" Y="14.624" Height="0.488" Width="2.149" />
   </Comment>
   <Class Name="AR_animatedAssetBundle">
-    <Position X="1" Y="10.5" Width="1.5" />
+    <Position X="1" Y="9.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="AR_objects" ManuallyRouted="true">
+      <Path>
+        <Point X="5.25" Y="7.281" />
+        <Point X="5.25" Y="8.953" />
+        <Point X="1.75" Y="8.953" />
+        <Point X="1.75" Y="9.25" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
       <FileName>Assets\Scripts\Cache\AR_objects.cs</FileName>
@@ -18,7 +29,18 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="AR_assetBundle">
-    <Position X="2.75" Y="10.5" Width="1.5" />
+    <Position X="2.75" Y="9.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="AR_objects" ManuallyRouted="true">
+      <Path>
+        <Point X="5.25" Y="7.281" />
+        <Point X="5.25" Y="8.968" />
+        <Point X="3.5" Y="8.968" />
+        <Point X="3.5" Y="9.25" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
       <FileName>Assets\Scripts\Cache\AR_objects.cs</FileName>
@@ -33,7 +55,18 @@
     </TypeIdentifier>
   </Class>
   <Class Name="AR_audio">
-    <Position X="6.25" Y="10.5" Width="1.5" />
+    <Position X="6.25" Y="9.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="AR_objects" ManuallyRouted="true">
+      <Path>
+        <Point X="5.25" Y="7.281" />
+        <Point X="5.25" Y="8.948" />
+        <Point X="7" Y="8.948" />
+        <Point X="7" Y="9.25" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
       <FileName>Assets\Scripts\Cache\AR_objects.cs</FileName>
@@ -41,7 +74,18 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="AR_image">
-    <Position X="8" Y="10.5" Width="1.5" />
+    <Position X="8" Y="9.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="AR_objects" ManuallyRouted="true">
+      <Path>
+        <Point X="5.25" Y="7.281" />
+        <Point X="5.25" Y="8.954" />
+        <Point X="8.75" Y="8.954" />
+        <Point X="8.75" Y="9.25" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
       <FileName>Assets\Scripts\Cache\AR_objects.cs</FileName>
@@ -49,7 +93,18 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="AR_logo">
-    <Position X="1" Y="8.25" Width="1.5" />
+    <Position X="1" Y="7.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="AR_objects" ManuallyRouted="true">
+      <Path>
+        <Point X="5.25" Y="7.281" />
+        <Point X="5.25" Y="7.485" />
+        <Point X="1.75" Y="7.485" />
+        <Point X="1.75" Y="7.75" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
       <FileName>Assets\Scripts\Cache\AR_objects.cs</FileName>
@@ -57,7 +112,18 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="AR_marker">
-    <Position X="2.75" Y="8.25" Width="1.5" />
+    <Position X="2.75" Y="7.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="AR_objects" ManuallyRouted="true">
+      <Path>
+        <Point X="5.25" Y="7.281" />
+        <Point X="5.25" Y="7.462" />
+        <Point X="3.5" Y="7.462" />
+        <Point X="3.5" Y="7.75" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
       <FileName>Assets\Scripts\Cache\AR_objects.cs</FileName>
@@ -65,7 +131,10 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="AR_model">
-    <Position X="4.5" Y="10.5" Width="1.5" />
+    <Position X="4.5" Y="9.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
       <FileName>Assets\Scripts\Cache\AR_objects.cs</FileName>
@@ -73,7 +142,18 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="AR_sticker">
-    <Position X="6.25" Y="8.25" Width="1.5" />
+    <Position X="6.25" Y="7.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="AR_objects" ManuallyRouted="true">
+      <Path>
+        <Point X="5.25" Y="7.281" />
+        <Point X="5.25" Y="7.547" />
+        <Point X="7" Y="7.547" />
+        <Point X="7" Y="7.75" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
       <FileName>Assets\Scripts\Cache\AR_objects.cs</FileName>
@@ -81,13 +161,16 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="AR_text">
-    <Position X="8" Y="8.25" Width="1.5" />
-    <InheritanceLine Type="AR_objects" FixedToPoint="true">
+    <Position X="8" Y="7.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="AR_objects" ManuallyRouted="true" FixedToPoint="true">
       <Path>
         <Point X="5.25" Y="7.281" />
-        <Point X="5.25" Y="7.875" />
-        <Point X="8.562" Y="7.875" />
-        <Point X="8.562" Y="8.25" />
+        <Point X="5.25" Y="7.52" />
+        <Point X="8.562" Y="7.52" />
+        <Point X="8.562" Y="7.75" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -97,10 +180,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="ARObjectJsonLoader">
-    <Position X="20" Y="7" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Nested Types" Collapsed="false" />
-    </Compartments>
+    <Position X="19.25" Y="7" Width="1.75" />
     <NestedTypes>
       <Class Name="ARObjectJsonLoader.Transform" Collapsed="true">
         <TypeIdentifier>
@@ -159,7 +239,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="ArObjects">
-    <Position X="27.25" Y="7.25" Width="1.5" />
+    <Position X="8" Y="4.5" Width="1.5" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
@@ -215,7 +295,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="DownloadebleARObject" Collapsed="true">
-    <Position X="15.75" Y="2.25" Width="1.5" />
+    <Position X="15.5" Y="2.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAQAAAAAAAACQAACIAEAAAAEAAAAAAgA=</HashCode>
       <FileName>Assets\Scripts\Downloads\DownloadebleARObject.cs</FileName>
@@ -270,22 +350,19 @@
     </TypeIdentifier>
   </Class>
   <Class Name="MarkerJsonLoader">
-    <Position X="23.5" Y="7" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Nested Types" Collapsed="false" />
-    </Compartments>
+    <Position X="23.25" Y="7" Width="2" />
     <NestedTypes>
-      <Class Name="MarkerJsonLoader.Image" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>Assets\Scripts\Json\MarkerJsonLoader.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Class>
       <Class Name="MarkerJsonLoader.Marker" Collapsed="true">
         <TypeIdentifier>
           <NewMemberFileName>Assets\Scripts\Json\MarkerJsonLoader.cs</NewMemberFileName>
         </TypeIdentifier>
       </Class>
       <Class Name="MarkerJsonLoader.MarkerList" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Json\MarkerJsonLoader.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="MarkerJsonLoader.Image" Collapsed="true">
         <TypeIdentifier>
           <NewMemberFileName>Assets\Scripts\Json\MarkerJsonLoader.cs</NewMemberFileName>
         </TypeIdentifier>
@@ -311,49 +388,46 @@
     </TypeIdentifier>
   </Class>
   <Class Name="PathWorker" Collapsed="true">
-    <Position X="30.75" Y="9" Width="1.5" />
+    <Position X="8" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAACAAAASAAEAAAAgAAAAAQAAAAAAAEAAAAAQAAAAg=</HashCode>
       <FileName>Assets\Scripts\Cache\PathWorker.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="System.Object" Collapsed="true">
-    <Position X="30.75" Y="7.75" Width="1.5" />
+    <Position X="8" Y="2.25" Width="1.5" />
     <TypeIdentifier />
   </Class>
   <Class Name="QRScanner">
-    <Position X="25.75" Y="2.25" Width="1.5" />
+    <Position X="25.25" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgQAAIAAQCBAkAAAAAAAAASBAAAAAwAABAAAABAAAFI=</HashCode>
       <FileName>Assets\Scripts\QRScanner.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ServerDownloader">
-    <Position X="35.75" Y="2" Width="1.5" />
+    <Position X="36.25" Y="2" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AIACAIAAAAAAAAAAAAAAAAAAAAAAAAAAAMEAAAAAAEA=</HashCode>
       <FileName>Assets\Scripts\Downloads\ServerDownloader.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="OrganizationStickers">
-    <Position X="32.25" Y="2.25" Width="1.5" />
+    <Position X="32.25" Y="2.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAAAAAAAAAEEAAAAAAAAAAAAABACAA=</HashCode>
       <FileName>Assets\Scripts\Заведения вкладка\OrganizationStickers.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="OranizationDetails">
-    <Position X="34" Y="2.25" Width="1.5" />
+    <Position X="34.25" Y="2.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAEACAAIAAgAUAAEQACAAKAAAAAAIAACAA=</HashCode>
       <FileName>Assets\Scripts\Заведения вкладка\OranizationDetails.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="InstitutionJsonLoader">
-    <Position X="21.75" Y="7" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Nested Types" Collapsed="false" />
-    </Compartments>
+    <Position X="21.25" Y="7" Width="1.75" />
     <NestedTypes>
       <Class Name="InstitutionJsonLoader.InstitutionObj" Collapsed="true">
         <TypeIdentifier>
@@ -412,6 +486,13 @@
     <TypeIdentifier>
       <HashCode>AAABAAAAACAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Focus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScriptChooser">
+    <Position X="23.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAACAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Downloads\ScriptChooser.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

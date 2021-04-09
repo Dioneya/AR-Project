@@ -8,7 +8,7 @@ using TMPro;
 public class InstitutionsManager : MonoBehaviour
 {
     public InstitutionJsonLoader.InstitutionList institutionList = new InstitutionJsonLoader.InstitutionList();
-    private List<GameObject> organizationsList = new List<GameObject>();
+    public List<GameObject> organizationsList {get;} = new List<GameObject>();
     [SerializeField] GameObject organization, detailsPage, retry;
     [SerializeField] TextMeshProUGUI scannerText, organizationsText;
     static public UnityEvent PickOrganization;
